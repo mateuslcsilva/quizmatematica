@@ -104,6 +104,7 @@ limpar o input
         var btn2 = document.querySelector('#btn2')
         btn2.addEventListener('click', clicar2)
         btn2.addEventListener('mouseout', mouseo2)
+        btn2.addEventListener('click', ClearFields )
         var a = []
         var div = document.querySelector('#div1')
         var respostas = document.querySelector('#respostas')
@@ -145,6 +146,10 @@ limpar o input
                         btn.style.backgroundColor = '#763cc7af'
                     }
 
+                    function ClearFields() {
+                    document.getElementById("resp").value = "";
+                    }
+                    
                     function clicar2(){
                     btn2.style.backgroundColor = 'white'
                     var r = document.querySelector('#resp')
