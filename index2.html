@@ -108,6 +108,8 @@ limpar o input
         var a = []
         var div = document.querySelector('#div1')
         var respostas = document.querySelector('#respostas')
+        var total = 0
+        var acertos = 0
         var t = 30
         
         setInterval(
@@ -121,7 +123,7 @@ limpar o input
                     div.removeChild(btn2)
                     div.removeChild(perg)
                     div.removeChild(resp)
-                    t = `ACABOU!!!<br> ${res}`
+                    t = `ACABOU!!!<br> SCORE:<br> ${acertos}/${total} <br> ${res}`
                     
                 }
                 respostas.innerHTML = t
@@ -171,8 +173,11 @@ limpar o input
     
                         if (resp == res1){
                             var res2 = String(`<br>`+a[1]+a[3]+a[2]+'='+resp+`✔️`)
+                            total++
+                            acertos++
                         } else{
                             var res2 = String(`<br>`+a[1]+a[3]+a[2]+'='+resp+`❌`)
+                            total++
                         }
                     res.push(res2)
                     a = []  
