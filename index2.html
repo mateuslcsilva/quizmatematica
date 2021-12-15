@@ -83,16 +83,14 @@
     <div id='div1'>
 
         <p id='perg' class='perg'></p>
-        <input type="number" name="resp" id="resp" class='resp'>
+        <input type="text" name="resp" id="resp" class='resp'>
         <input type="button" value="PRÓXIMA" id='btn' class='btn'>
         <input type="button" value="RESPONDER" id='btn2' class='btn2'>
         <p id='respostas' class='respostas'>30</p>
 
     </div>
     <script>
-        /*
-limpar o input
-*/
+
         const nnn = [1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9]
         const nnn1 = [0 ,1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9]
         const op = ['x' , '+' , '-']
@@ -111,6 +109,54 @@ limpar o input
         var total = 0
         var acertos = 0
         var t = 30
+
+        document.addEventListener('keydown', function(e){
+
+                if (e.key === 'Enter'){
+                    var btnigual2 = document.querySelector('#btn2')
+                    btnigual2.click()
+                }
+                if (e.key === '+'){
+                    var btnigual2 = document.querySelector('#btn')
+                    btnigual2.click()
+                }
+                if (e.key === '1'){
+                    document.querySelector('#resp').value += 1
+                }
+                if (e.key === '2'){
+                    document.querySelector('#resp').value += 2
+                }
+                if (e.key === '3'){
+                    document.querySelector('#resp').value += 3
+                }
+                if (e.key === '4'){
+                    document.querySelector('#resp').value += 4
+                }
+
+                if (e.key === '5'){
+                    document.querySelector('#resp').value += 5
+                }
+                if (e.key === '6'){
+                    document.querySelector('#resp').value += 6
+                }
+                if (e.key === '7'){
+                    document.querySelector('#resp').value += 7
+                }
+                if (e.key === '8'){
+                    document.querySelector('#resp').value += 8
+                }
+                if (e.key === '9'){
+                    document.querySelector('#resp').value += 9
+                }
+                if (e.key === '0'){
+                    document.querySelector('#resp').value += 0
+                }
+                if (e.key == '-'){
+                    document.querySelector('#resp').value += '-'
+                }
+            }
+        )
+
         
         setInterval(
 
@@ -123,8 +169,9 @@ limpar o input
                     div.removeChild(btn2)
                     div.removeChild(perg)
                     div.removeChild(resp)
-                    t = `ACABOU!!!<br> SCORE:<br> ${acertos}/${total} <br> ${res}`
-                    
+                    t = `ACABOU!!!<br> SCORE:<br> ${acertos}/${total} <br> ${res}<br><br> <kbd>F5</kbd> PARA RECOMEÇAR.`
+                    respostas.style.top = '20px'
+                                      
                 }
                 respostas.innerHTML = t
             }, 1000
