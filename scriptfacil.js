@@ -17,7 +17,11 @@ document.addEventListener('keydown', function (e) {
     e.key === 'Enter' ? btn.click() : {}
     e.key == 'Shift' ? window.location.href = 'index.html' : {}
     if (t >= 0) {
-        e.key === 'Backspace' ? document.querySelector('#resp').innerText = '' : {}
+        if(e.key === 'Backspace' ){ 
+            resp2 = Array.from(document.querySelector('#resp').innerText)
+            resp2.pop()
+            document.querySelector('#resp').innerText = resp2.join('')
+        }
         e.key === '1' ? document.querySelector('#resp').innerText += 1 : {}
         e.key === '2' ? document.querySelector('#resp').innerText += 2 : {}
         e.key === '3' ? document.querySelector('#resp').innerText += 3 : {}
@@ -57,9 +61,10 @@ setInterval(
             t = `ACABOU!!!<br> SCORE:<br> ${acertos}/${total} <br> ${res3}<br><br> <kbd>Esc</kbd> PARA RECOMEÇAR. <br><br>Você pode voltar ao quiz padrão apertando <strong>SHIFT</strong> novamente.`
             respostas.style.top = '20px'
             respostas.style.textAlign = 'center'
-            total >= 15 ? div.style.height = '800px' : {}
-            total > 20 ? div.style.height = '900px' : {}
-            total > 25 ? div.style.height = '1000px' : {}
+            total >= 10 ? div.style.height = '800px' : {}
+            total >= 15 ? div.style.height = '1000px' : {}
+            total > 20 ? div.style.height = '1100px' : {}
+            total > 25 ? div.style.height = '1200px' : {}
         }
         respostas.innerHTML = t
     }, 1000

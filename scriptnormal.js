@@ -12,12 +12,21 @@ var total = 0
 var acertos = 0
 var t = 30
 
+function splitString(stringToSplit) {
+    var arrayOfStrings = stringToSplit.split(separator);
+    return arrayOfStrings
+}
+
 document.addEventListener('keydown', function (e) {
     e.key == 'Escape' ? window.location.href = 'index.html' : {}
     e.key == 'Shift' ? window.location.href = 'indexfacil.html' : {}
     e.key === 'Enter' ? btn.click() : {}
     if (t >= 0) {
-        e.key === 'Backspace' ? document.querySelector('#resp').innerText = '' : {}
+        if(e.key === 'Backspace' ){ 
+            resp2 = Array.from(document.querySelector('#resp').innerText)
+            resp2.pop()
+            document.querySelector('#resp').innerText = resp2.join('')
+        }
         e.key === '1' ? document.querySelector('#resp').innerText += 1 : {}
         e.key === '2' ? document.querySelector('#resp').innerText += 2 : {}
         e.key === '3' ? document.querySelector('#resp').innerText += 3 : {}
