@@ -1,0 +1,90 @@
+body{
+    font-family: 'Calibri';
+    background-color: #1fc7ab;
+    font-size: 15pt;
+}
+div{
+    background-color: white;
+    position: absolute;
+    left: 530px;
+    width: 300px;
+    height: 640px;
+    border-radius: 50px;
+    box-shadow: 2px 10px 10px 10px rgba(110, 101, 101, 0.637);
+}
+h1{
+    position: absolute;
+    top: 300px;
+    font-size: 40pt;
+    text-align: center;  
+}
+.h1{
+    left: 20px;
+}
+.h2{
+    left: 840px;
+}
+.perg{
+    position: absolute;
+    top: 70px;
+    left: 47px;
+    text-align: center;
+    width: 200px;
+}
+.p{
+    position: absolute;
+    top: 90px;
+    left: 107px;  
+}
+.resp{
+    position: absolute;
+    top: 100px;
+    left: 125px;  
+    border-radius: 20px;
+    height: 50px;
+    width: auto;
+    font: bold 30pt arial;
+}
+.btn{
+    position: absolute;
+    top: 190px;
+    left: 95px;  
+    background-color: #1fc7abaf;
+    border: solid 2px #65dfcbfb;
+    border-radius: 15px;
+    width: 100px;
+    cursor: pointer;
+    display: none;
+
+}
+.btn2{
+    position: absolute;
+    top: 220px;
+    left: 95px;  
+    background-color: #763cc7af;
+    border: solid 2px #773cc7;
+    border-radius: 15px;
+    width: 100px;
+    cursor: pointer;
+}
+.respostas{
+    position: absolute;
+    left: 95px;
+    top: 250px;
+    background-color: white;
+    text-align: center;
+    margin-left: auto;
+    width: 100px;
+}
+.exp{
+    position: absolute;
+    top: 250px;
+    text-align: center;
+}
+.margintop{
+    position: absolute;
+    top: 170px;
+    text-align: center;
+    width: 250px;
+    left: -20px;
+}
