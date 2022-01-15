@@ -10,7 +10,7 @@ var div = document.querySelector('#div1')
 var respostas = document.querySelector('#respostas')
 var total = 0
 var acertos = 0
-var t = 1
+var t = 30
 
 document.addEventListener('keydown', function (e) {
     e.key == 'Escape' ? window.location.href = 'indexfacil.html' : {}
