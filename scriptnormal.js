@@ -10,11 +10,11 @@ var div = document.querySelector('#div1')
 var respostas = document.querySelector('#respostas')
 var total = 0
 var acertos = 0
-var t = 30
+var t = 1
 
 document.addEventListener('keydown', function (e) {
     e.key == 'Escape' ? window.location.href = 'index.html' : {}
-    e.key == 'Shift' ? window.location.href = 'index3.html' : {}
+    e.key == 'Shift' ? window.location.href = 'indexfacil.html' : {}
     e.key === 'Enter' ? btn.click() : {}
     if (t >= 0) {
         e.key === 'Backspace' ? document.querySelector('#resp').innerText = '' : {}
@@ -35,21 +35,21 @@ document.addEventListener('keydown', function (e) {
 btn.style.backgroundColor = 'white'
 var op0 = Math.floor(Math.random() * op.length)
 if (op0 < 1) {
-    do{
+    do {
         var n1 = nnn[Math.floor(Math.random() * nnn.length)].toString()
         var n2 = nnn1[Math.floor(Math.random() * nnn1.length)].toString()
         var n3 = nnn[Math.floor(Math.random() * nnn.length)].toString()
         var n4 = nnn1[Math.floor(Math.random() * nnn1.length)].toString()
         var num1 = Number(n1 + n2)
         var num2 = Number(n3 + n4)
-    }while(num1 > 15 || num2 > 10)
-}else{
-var n1 = nnn[Math.floor(Math.random() * nnn.length)].toString()
-var n2 = nnn1[Math.floor(Math.random() * nnn1.length)].toString()
-var n3 = nnn[Math.floor(Math.random() * nnn.length)].toString()
-var n4 = nnn1[Math.floor(Math.random() * nnn1.length)].toString()
-var num1 = Number(n1 + n2)
-var num2 = Number(n3 + n4)
+    } while (num1 > 15 || num2 > 10)
+} else {
+    var n1 = nnn[Math.floor(Math.random() * nnn.length)].toString()
+    var n2 = nnn1[Math.floor(Math.random() * nnn1.length)].toString()
+    var n3 = nnn[Math.floor(Math.random() * nnn.length)].toString()
+    var n4 = nnn1[Math.floor(Math.random() * nnn1.length)].toString()
+    var num1 = Number(n1 + n2)
+    var num2 = Number(n3 + n4)
 }
 var op1 = op[op0].toString()
 perg.innerHTML = num1 + op1 + num2
@@ -68,10 +68,10 @@ setInterval(
             t = `ACABOU!!!<br> SCORE:<br> ${acertos}/${total} <br> ${res3}<br><br> <kbd>Esc</kbd> PARA RECOMEÇAR.`
             respostas.style.top = '20px'
             respostas.style.textAlign = 'center'
-            if(total < 5){
+            if (total < 5) {
                 respostas.style.width = '200px'
                 respostas.style.left = '50px'
-                t+= '<br><br>Está um pouco difícil demais? Comece pela versão simplificada apertando <strong>SHIFT</strong>. <br><br>Você pode voltar ao quiz padrão apertando <strong>SHIFT</strong> novamente.'
+                t += '<br><br>Está um pouco difícil demais? Comece pela versão simplificada apertando <strong>SHIFT</strong>. <br><br>Você pode voltar ao quiz padrão apertando <strong>SHIFT</strong> novamente.'
             }
             total >= 15 ? div.style.height = '800px' : {}
             total > 20 ? div.style.height = '900px' : {}
@@ -116,21 +116,21 @@ function clicar() {
         btn.style.backgroundColor = 'white'
         var op0 = Math.floor(Math.random() * op.length)
         if (op0 < 1) {
-            do{
+            do {
                 var n1 = nnn[Math.floor(Math.random() * nnn.length)].toString()
                 var n2 = nnn1[Math.floor(Math.random() * nnn1.length)].toString()
                 var n3 = nnn[Math.floor(Math.random() * nnn.length)].toString()
                 var n4 = nnn1[Math.floor(Math.random() * nnn1.length)].toString()
                 var num1 = Number(n1 + n2)
                 var num2 = Number(n3 + n4)
-            }while(num1 > 15 || num2 > 10)
-        }else{
-        var n1 = nnn[Math.floor(Math.random() * nnn.length)].toString()
-        var n2 = nnn1[Math.floor(Math.random() * nnn1.length)].toString()
-        var n3 = nnn[Math.floor(Math.random() * nnn.length)].toString()
-        var n4 = nnn1[Math.floor(Math.random() * nnn1.length)].toString()
-        var num1 = Number(n1 + n2)
-        var num2 = Number(n3 + n4)
+            } while (num1 > 15 || num2 > 10)
+        } else {
+            var n1 = nnn[Math.floor(Math.random() * nnn.length)].toString()
+            var n2 = nnn1[Math.floor(Math.random() * nnn1.length)].toString()
+            var n3 = nnn[Math.floor(Math.random() * nnn.length)].toString()
+            var n4 = nnn1[Math.floor(Math.random() * nnn1.length)].toString()
+            var num1 = Number(n1 + n2)
+            var num2 = Number(n3 + n4)
         }
         var op1 = op[op0].toString()
         perg.innerHTML = num1 + op1 + num2

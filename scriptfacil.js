@@ -10,10 +10,10 @@ var div = document.querySelector('#div1')
 var respostas = document.querySelector('#respostas')
 var total = 0
 var acertos = 0
-var t = 30
+var t = 1
 
 document.addEventListener('keydown', function (e) {
-    e.key == 'Escape' ? window.location.href = 'index3.html' : {}
+    e.key == 'Escape' ? window.location.href = 'indexfacil.html' : {}
     e.key === 'Enter' ? btn.click() : {}
     e.key == 'Shift' ? window.location.href = 'index.html' : {}
     if (t >= 0) {
