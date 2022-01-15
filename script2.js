@@ -16,6 +16,7 @@ document.addEventListener('keydown', function (e) {
     e.key == 'Escape' ? window.location.href = 'index.html' : {}
     e.key === 'Enter' ? btn.click() : {}
     if (t >= 0) {
+        e.key === 'Backspace'? document.querySelector('#resp').innerText = '' : {}
         e.key === '1' ? document.querySelector('#resp').innerText += 1 : {}
         e.key === '2' ? document.querySelector('#resp').innerText += 2 : {}
         e.key === '3' ? document.querySelector('#resp').innerText += 3 : {}
@@ -55,6 +56,9 @@ setInterval(
             t = `ACABOU!!!<br> SCORE:<br> ${acertos}/${total} <br> ${res3}<br><br> <kbd>Esc</kbd> PARA RECOMEÇAR.`
             respostas.style.top = '20px'
             respostas.style.textAlign = 'center'
+            total >= 15? div.style.height = '800px' : {}
+            total > 20? div.style.height = '900px' : {}
+            total > 25? div.style.height = '1000px' : {}
         }
         respostas.innerHTML = t
     }, 1000
